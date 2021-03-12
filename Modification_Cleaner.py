@@ -13,8 +13,8 @@ def clean(in_file, out_file):
         new_item = [] #create a list that will contain desired modifications
         for thing in item:
             if "->" not in thing:
-                pattern = r'\(\d+\.\d+\)'
-                thing = re.sub(pattern, '', thing)
+               # pattern = r'\(\d+\.\d+\)'
+               # thing = re.sub(pattern, '', thing)
                 new_item.append(thing)
         line[3] = ", ".join(new_item) #edit the line so that it contains the filtered modifications
         line = "\t".join(line)
